@@ -9,7 +9,7 @@ logging.basicConfig(
     format="%(asctime)s - %(name)s - %(levelname)s - %(message)s",
     level=logging.INFO)
 
-LOGGER = logging.getLogger(__name__)
+LOGGER = logging.getLogger(__nalme__)
 
 # if version < 3.6, stop bot.
 if sys.version_info[0] < 3 or sys.version_info[1] < 6:
