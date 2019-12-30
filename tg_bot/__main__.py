@@ -18,18 +18,15 @@ from tg_bot.modules.helper_funcs.chat_status import is_user_admin
 from tg_bot.modules.helper_funcs.misc import paginate_modules
 
 PM_START_TEXT = """
-hoi {}, my name is {}! if you have any questions about how to use me please give me /help... 
+hoi {}, my name is {}!
 
-im a group manager bot maintained by  [this person](tg://user?id={}).
+im a group manager bot maintained by  [this wonderfull person](tg://user?id=951920191).
 
-My future updates will be put into This Channel - @MarieChechi & My Support Group @InFoTelGroup.
+My future updates will be put into This Channel - @ShizuChanUpdates & My Support Group @ShizuchanChat.
 
-This is my [Deploy Code](https://heroku.com/deploy?template=https://github.com/TGExplore/Marie-2.0-English),
-you can create clone same like me..
+For more commands or questions on how to use me click /help...
 
-For more commands click /help...
-
-**Keep in mind that any changes you DO do to the source have to be on github, as per the license.**
+Want to add me on your group too?? [Click Here](http://telegram.me/shizuchanbot?startgroup=botstart)
 
 """
 
@@ -145,7 +142,7 @@ def start(bot: Bot, update: Update, args: List[str]):
                 PM_START_TEXT.format(escape_markdown(first_name), escape_markdown(bot.first_name), OWNER_ID),
                 parse_mode=ParseMode.MARKDOWN)
     else:
-        update.effective_message.reply_text("waked up😏😏😏")
+        update.effective_message.reply_text("I'm Not Dead Yet (☞ﾟ∀ﾟ)☞")
 
 
 # for test purposes
