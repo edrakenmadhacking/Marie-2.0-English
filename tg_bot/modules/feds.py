@@ -19,11 +19,11 @@ from tg_bot.modules.helper_funcs.extraction import extract_user, extract_user_an
 from tg_bot.modules.helper_funcs.string_handling import markdown_parser
 from tg_bot.modules.disable import DisableAbleCommandHandler
 
-import haruka.modules.sql.feds_sql as sql
+import tg_bot.modules.sql.feds_sql as sql
 
-from haruka.modules.translations.strings import tld
+from tg_bot.modules.translations.strings import tld
 
-from haruka.modules.connection import connected
+from tg_bot.modules.connection import connected
 
 # Hello bot owner, I spended for feds many hours of my life, Please don't remove this if you still respect MrYacha and peaktogoo
 # Federation by MrYacha 2018-2019
