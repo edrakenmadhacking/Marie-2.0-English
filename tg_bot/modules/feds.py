@@ -21,8 +21,6 @@ from tg_bot.modules.disable import DisableAbleCommandHandler
 
 import tg_bot.modules.sql.feds_sql as sql
 
-from tg_bot.modules.translations.strings import tld
-
 from tg_bot.modules.connection import connected
 
 # Hello bot owner, I spended for feds many hours of my life, Please don't remove this if you still respect MrYacha and peaktogoo
