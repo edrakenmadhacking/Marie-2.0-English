@@ -53,7 +53,7 @@ def promote(bot: Bot, update: Update, args: List[str]) -> str:
                           can_pin_messages=bot_member.can_pin_messages,
                           can_promote_members=bot_member.can_promote_members)
 
-    message.reply_text("Successfully promoted {username} in *{chatD.title}*🧡!")
+    message.reply_text("Successfully promoted {username} in *{chat.title}*🧡!")
     return "<b>{}:</b>" \
            "\n#PROMOTED" \
            "\n<b>Admin:</b> {}" \
@@ -198,8 +198,8 @@ def adminlist(bot: Bot, update: Update):
         if user.username:
             name = "[{}](tg://user?id={})".format(user.first_name + (user.last_name or ""), user.id)
         if status == "creator":
-            text += "\n 🔱 Creator:"
-            text += "\n` • `{} \n\n 🔰 Admin:".format(name)
+            text += "\n 🌐*Owner/Creator*:"
+            text += "\n ➤ @{} \n\n 🌀*Admin's*:".format(user.username)
     for admin in administrators:
         user = admin.user
         status = admin.status
@@ -207,7 +207,7 @@ def adminlist(bot: Bot, update: Update):
         if user.username:
             name = "[{}](tg://user?id={})".format(user.first_name + (user.last_name or ""), user.id)
         if status == "administrator":
-            text += "\n - @{}".format(user.username)
+            text += "\n ➠ @{}".format(user.username)
     update.effective_message.reply_text(text, parse_mode=ParseMode.MARKDOWN)
 
 
