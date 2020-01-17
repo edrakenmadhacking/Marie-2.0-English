@@ -28,7 +28,7 @@ def promote(bot: Bot, update: Update, args: List[str]) -> str:
 
     user_id = extract_user(message, args)
     if not user_id:
-        message.reply_text("mension one.... 🤷🏻‍♂.")
+        message.reply_text("mention one.... 🤷🏻‍♂.")
         return ""
 
     user_member = chat.get_member(user_id)
@@ -53,7 +53,7 @@ def promote(bot: Bot, update: Update, args: List[str]) -> str:
                           can_pin_messages=bot_member.can_pin_messages,
                           can_promote_members=bot_member.can_promote_members)
 
-    message.reply_text("promoted🧡")
+    message.reply_text("Succesfully Promoted {user.username} on *{update.effective_chat.title}*")
     return "<b>{}:</b>" \
            "\n#PROMOTED" \
            "\n<b>Admin:</b> {}" \
@@ -74,12 +74,12 @@ def demote(bot: Bot, update: Update, args: List[str]) -> str:
 
     user_id = extract_user(message, args)
     if not user_id:
-        message.reply_text("mension one.... 🤷🏻‍♂.")
+        message.reply_text("mention one.... 🤷🏻‍♂.")
         return ""
 
     user_member = chat.get_member(user_id)
     if user_member.status == 'creator':
-        message.reply_text("i cant ban creator of the group.... 😬")
+        message.reply_text("i can't ban creator of the group.... 😬")
         return ""
 
     if not user_member.status == 'administrator':
@@ -192,8 +192,8 @@ def adminlist(bot: Bot, update: Update):
     administrators = update.effective_chat.get_administrators()
     text = "Administrator Details of *{}*:".format(update.effective_chat.title or "this chat")
     for admin in administrators:
-        user = admin.user except bot.id
-        status = admin.status except bot.id
+        user = admin.user
+        status = admin.status
         name = "[{}](tg://user?id={})".format(user.username, user.id)
         if user.username:
             name = "[{}](tg://user?id={})".format(user.username, user.id)
@@ -201,8 +201,8 @@ def adminlist(bot: Bot, update: Update):
             text += "\n\n 🌐 *Creator*:"
             text += "\n ➤ {} \n\n 🌀 *Admin*:".format(name)
     for admin in administrators:
-        user = admin.user except bot.id
-        status = admin.status except bot.id
+        user = admin.user
+        status = admin.status
         name = "[{}](tg://user?id={})".format(user.username, user.id)
         if user.username:
             name = "[{}](tg://user?id={})".format(user.username, user.id)
