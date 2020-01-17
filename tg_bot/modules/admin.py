@@ -190,24 +190,24 @@ def invite(bot: Bot, update: Update):
 @run_async
 def adminlist(bot: Bot, update: Update):
     administrators = update.effective_chat.get_administrators()
-    text = "Admins in *{}*:".format(update.effective_chat.title or "this chat")
+    text = "Administrator Details of *{}*:".format(update.effective_chat.title or "this chat")
     for admin in administrators:
-        user = admin.user
-        status = admin.status
+        user = admin.user except bot.id
+        status = admin.status except bot.id
         name = "[{}](tg://user?id={})".format(user.username, user.id)
         if user.username:
             name = "[{}](tg://user?id={})".format(user.username, user.id)
         if status == "creator":
-            text += "\n 🌐 *Creator*:"
-            text += "\n ➤ @{} \n\n 🌀 *Admin*:".format(name)
+            text += "\n\n 🌐 *Creator*:"
+            text += "\n ➤ {} \n\n 🌀 *Admin*:".format(name)
     for admin in administrators:
-        user = admin.user
-        status = admin.status
+        user = admin.user except bot.id
+        status = admin.status except bot.id
         name = "[{}](tg://user?id={})".format(user.username, user.id)
         if user.username:
             name = "[{}](tg://user?id={})".format(user.username, user.id)
         if status == "administrator":
-            text += "\n • @{}".format(name)
+            text += "\n • {}".format(name)
     update.effective_message.reply_text(text, parse_mode=ParseMode.MARKDOWN)
 
 
