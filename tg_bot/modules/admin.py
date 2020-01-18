@@ -79,7 +79,7 @@ def demote(bot: Bot, update: Update, args: List[str]) -> str:
 
     user_member = chat.get_member(user_id)
     if user_member.status == 'creator':
-        message.reply_text("i can't ban creator of the group.... 😬")
+        message.reply_text("why the fuck i should ban the creator of group.... 😬")
         return ""
 
     if not user_member.status == 'administrator':
