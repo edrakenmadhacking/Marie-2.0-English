@@ -189,7 +189,7 @@ def invite(bot: Bot, update: Update):
 
 @run_async
 def adminlist(bot: Bot, update: Update):
-    administrators = update.effective_chat.get_administrators() except bot.id
+    administrators = update.effective_chat.get_administrators(except bot.id)
     text = "Administrator Details of *{}*:".format(update.effective_chat.title or "this chat")
     for admin in administrators:
         user = admin.user
