@@ -20,13 +20,11 @@ from tg_bot.modules.helper_funcs.misc import paginate_modules
 PM_START_TEXT = """
 hoi {}, my name is {}!
 
-im a group manager bot maintained by  [this wonderfull person](tg://user?id=951920191).
-
-My future updates will be put into This Channel - @ShizuChanUpdates & My Support Group @ShizuchanChat.
+im a group manager bot maintained by  [this wonderfull person](tg://user?id=989362465).
 
 For more commands or questions on how to use me click /help...
 
-Want to add me on your group too?? [Click Here](http://telegram.me/shizuchanbot?startgroup=botstart)
+Want to add me on your group too?? [Click Here](http://telegram.me/Lbrittobot?startgroup=botstart)
 
 """
 
