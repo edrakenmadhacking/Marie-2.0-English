@@ -22,8 +22,6 @@ hoi {}, my name is {}!
 
 im a group manager bot maintained by [this wonderfull person](tg://user?id=989362465).
 
-Thanks to [this person](tg://user?id=686021814) for contribution.
-
 For more commands or questions on how to use me click /help...
 
 Want to add me on your group too?? [Click Here](http://telegram.me/froggyrobot?startgroup=botstart)
